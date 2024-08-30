@@ -1,0 +1,129 @@
+/* FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* UNIVERSAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'nunito';
+}
+
+body {
+    background-color: #000;
+    background-image: linear-gradient(#00000077, #00000077), url('img/bg.jpg');
+    background-size: cover;
+    height: 90vh;
+}
+
+/* NAVAGATION */
+
+.navbar {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #0000008f;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.webtitle a {
+    text-decoration: none;
+    color: #ff7b00;
+    opacity: 0.6;
+    transition: all 0.5s ease-in;
+}
+
+.webtitle a:hover {
+    opacity: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+.navlink {
+    text-decoration: none;
+    opacity: 0.6;
+    transition: all 0.5s ease-in;
+}
+
+.navlink:hover {
+    opacity: 1;
+}
+
+/* CONTENT */
+
+    /* GAMES */
+
+    .game-list {
+        list-style: none;
+        margin-top: 10vh;
+        padding: min(2vw, 10px);
+        text-align: center;
+    }
+
+    .game-item {
+        display: inline-block;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .game {
+        border: none;
+        width: min(25vw, 150px);
+        height: min(25vw, 150px);
+        border-radius: 20px;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-blend-mode: normal;
+        transition: all 0.6s ease-in-out;
+    }
+
+    .game:hover {
+        background-blend-mode: multiply;
+        background-color: gray;
+    }
+
+    .game-item p {
+        /* ON OR NOT */
+        display: none;
+        /*  */
+        padding: 4% 0;
+        transition: all 0.6s ease-in-out;
+        opacity: 0.5;
+        font-size: min(3vw, 20px)
+    }
+
+    .game:hover .play {
+        opacity: 1;
+    }
+
+    .play {
+        color: transparent;
+        text-shadow: 0 0 0 #ff7b00;
+        font-size: 60px;
+        transform: rotate(90deg);
+        opacity: 0;
+        transition: all 0.6s ease-in-out;
+    }
+
