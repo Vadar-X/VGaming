@@ -1,0 +1,53 @@
+<Module>
+<ModulePrefs title="about:blank"/>
+<Content type="html">
+<![CDATA[ 
+<html>
+<head>
+<script type="text/javascript">
+    function runApp() {
+        // Open my application
+   var urlObj = new window.URL(window.location.href);
+    var url = "https://images-opensocial.googleusercontent.com/gadgets/ifr?container=ig&url=" + "https://raw.githubusercontent.com/Vadar-X/VGaming/main/main.xml"
+    var win;
+    
+    if (win) {
+            win.focus();
+        } else {
+            win = window.open();
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100%';
+            var iframe = win.document.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100vh';
+            iframe.style.margin = '0';
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+            
+
+            var interval = setInterval(function() {
+                if (win.closed) {
+                    clearInterval(interval);
+                    win = undefined;
+        
+                }
+            }, 500);
+
+        }
+        // Close this window
+        window.open('about:blank', '_self');
+    }
+    runApp();
+</script>
+</head>
+<body>
+</body>
+</html>
+<script>
+ 
+</script>
+
+ ]]>
+</Content>
+</Module>
